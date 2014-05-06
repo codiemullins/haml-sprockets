@@ -23,7 +23,7 @@ module Haml
         haml_path = File.expand_path("../../vendor/assets/javascripts/haml.js", __FILE__)
         haml_lib = File.read(haml_path)
         context = ExecJS.compile(haml_lib)
-        return context.eval("Haml.optimize(Haml.compile('#{haml_code}', {escapeHtmlByDefault: true}))")
+        return context.eval("Haml.compile('#{haml_code}', {escapeHtmlByDefault: true})")
       end
     end
   end
